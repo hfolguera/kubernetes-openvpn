@@ -1,0 +1,6 @@
+*.old
+*.bck
+password
+*.swp
+*.tmp
+charts/ovpn0

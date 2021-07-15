@@ -18,11 +18,13 @@ helm install openvpn suda/personal-ovpn -f values.yaml
 ### 3. Generate secrets
 ```
 export VPN_HOSTNAME=vpn.example.com
+export DNS_SERVER=8.8.8.8
+cd charts
 # Generate basic OpenVPN config
-./charts/bin/generate-config
+./bin/generate-config
 # Repeat this step for all the clients you need
-$ CLIENT_NAME=my-client ./charts/bin/add-client
+CLIENT_NAME=my-client ./bin/add-client
 # Set the Kubernetes secrets. Prepend with REPLACE=true to update existing ones
-$ ./charts/bin/set-secrets
+NAMESPACE=openvpn ./bin/set-secrets
 ```
 

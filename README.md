@@ -11,7 +11,8 @@ Deployment is based on suda helm chart (https://github.com/suda/charts) and its 
 ### 2. Install personal-openvpn chart
 ```
 helm repo update
-helm install suda/personal-ovpn
+kubectl create namespace openvpn
+helm install openvpn suda/personal-ovpn -f values.yaml
 ```
 
 ### 3. Generate secrets

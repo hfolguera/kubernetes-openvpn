@@ -28,3 +28,6 @@ CLIENT_NAME=my-client ./bin/add-client
 NAMESPACE=openvpn ./bin/set-secrets
 ```
 
+## Next Steps
+* Fix metallb service annotation
+* Set Client IP Address range

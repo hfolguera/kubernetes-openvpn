@@ -26,7 +26,7 @@ service:
 serviceAnnotations: {metallb.universe.tf/address-pool: openvpn-pool}
 
 # limitTraficToNamespace -- limit network traffic just to OpenVPN namespace
-limitTraficToNamespace: true
+limitTraficToNamespace: false
 # limitedCidr -- CIDR to be blocked out
 limitedCidr: "10.0.0.0/8"
 
@@ -56,7 +56,7 @@ automatic:
   # automatic.enabled -- Skip manual steps and generate configuration & pki according to values config, Warning, PKI will be passwordless !
   enabled: false
   # automatic.externalHostname -- Hostname OR Ip of cluster openvpn entrypoint, default to 'domain.tld' so you must define it
-  externalHostname: ""
+  externalHostname: "openvpn.calfolguera.com"
   # automatic.externalPort -- Port cluster openvpn entrypoint, defaults to service.port (nodePort)
   externalPort: ""
   # automatic.cipher -- Cipher used
